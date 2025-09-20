@@ -1,0 +1,68 @@
+[2025-09-05 20:39:15.896]	debug.info	dao/User.go:27	未找到用户名：	{"userName": "Bussiness"}
+[2025-09-05 20:46:01.902]	debug.info	dao/User.go:27	未找到用户名：	{"userName": "Bussiness"}
+[2025-09-05 20:46:39.168]	debug.error	dao/User.go:34	用户已存在：	{"user": {"ID":1,"CreatedAt":"2025-09-05T20:46:02+08:00","UpdatedAt":"2025-09-05T20:46:02+08:00","DeletedAt":null,"UserName":"Bussiness","Email":"","PasswordDigest":"$2a$04$PN4y4E7nbZgg3PQ8adxFn.u9i1BKc9LXurIz5iZaGI1k8s56qvYOS","NickName":"Bussiness","Status":"active","Avatar":"avatar.JPG","Money":"F6rYcXVfytZkhL/p47g0oQ=="}}
+[2025-09-08 14:46:33.818]	debug.error	v1/User.go:25	用户请求信息失败：	{"err": "用户昵称不能为空"}
+[2025-09-08 14:46:33.819]	debug.error	dao/User.go:34	用户已存在：	{"user": {"ID":1,"CreatedAt":"2025-09-05T20:46:02+08:00","UpdatedAt":"2025-09-05T20:46:02+08:00","DeletedAt":null,"UserName":"Bussiness","Email":"","PasswordDigest":"$2a$04$PN4y4E7nbZgg3PQ8adxFn.u9i1BKc9LXurIz5iZaGI1k8s56qvYOS","NickName":"Bussiness","Status":"active","Avatar":"avatar.JPG","Money":"F6rYcXVfytZkhL/p47g0oQ=="}}
+[2025-09-08 14:49:06.855]	debug.error	v1/User.go:25	用户请求信息失败：	{"err": "用户昵称不能为空"}
+[2025-09-08 14:51:34.926]	debug.error	v1/User.go:44	用户请求信息失败：	{"err": "Paramter error"}
+[2025-09-08 14:51:43.430]	debug.error	v1/User.go:44	用户请求信息失败：	{"err": "用户昵称不能为空"}
+[2025-09-08 14:57:03.467]	debug.error	dao/User.go:34	用户已存在：	{"user": {"ID":1,"CreatedAt":"2025-09-05T20:46:02+08:00","UpdatedAt":"2025-09-05T20:46:02+08:00","DeletedAt":null,"UserName":"Bussiness","Email":"","PasswordDigest":"$2a$04$PN4y4E7nbZgg3PQ8adxFn.u9i1BKc9LXurIz5iZaGI1k8s56qvYOS","NickName":"Bussiness","Status":"active","Avatar":"avatar.JPG","Money":"F6rYcXVfytZkhL/p47g0oQ=="}}
+[2025-09-08 14:57:03.467]	debug.info	service/User.go:67	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-09-08 15:01:03.652]	debug.error	dao/User.go:34	用户已存在：	{"user": {"ID":1,"CreatedAt":"2025-09-05T20:46:02+08:00","UpdatedAt":"2025-09-05T20:46:02+08:00","DeletedAt":null,"UserName":"Bussiness","Email":"","PasswordDigest":"$2a$04$PN4y4E7nbZgg3PQ8adxFn.u9i1BKc9LXurIz5iZaGI1k8s56qvYOS","NickName":"Bussiness","Status":"active","Avatar":"avatar.JPG","Money":"F6rYcXVfytZkhL/p47g0oQ=="}}
+[2025-09-08 15:01:03.652]	debug.info	service/User.go:67	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-09-08 15:01:03.653]	debug.info	service/User.go:75	密码验证成功	{"user_name": "Bussiness"}
+[2025-09-08 15:01:26.338]	debug.error	dao/User.go:34	用户已存在：	{"user": {"ID":1,"CreatedAt":"2025-09-05T20:46:02+08:00","UpdatedAt":"2025-09-05T20:46:02+08:00","DeletedAt":null,"UserName":"Bussiness","Email":"","PasswordDigest":"$2a$04$PN4y4E7nbZgg3PQ8adxFn.u9i1BKc9LXurIz5iZaGI1k8s56qvYOS","NickName":"Bussiness","Status":"active","Avatar":"avatar.JPG","Money":"F6rYcXVfytZkhL/p47g0oQ=="}}
+[2025-09-08 15:01:26.338]	debug.info	service/User.go:67	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-09-08 15:01:26.339]	debug.error	service/User.go:71	密码验证失败	{"user_name": "Bussiness"}
+[2025-09-08 15:01:33.694]	debug.info	dao/User.go:27	未找到用户名：	{"userName": "Bussines"}
+[2025-09-08 15:01:33.694]	debug.error	service/User.go:59	用户不存在	{"user_name": "Bussines"}
+[2025-09-08 15:01:42.688]	debug.error	dao/User.go:34	用户已存在：	{"user": {"ID":1,"CreatedAt":"2025-09-05T20:46:02+08:00","UpdatedAt":"2025-09-05T20:46:02+08:00","DeletedAt":null,"UserName":"Bussiness","Email":"","PasswordDigest":"$2a$04$PN4y4E7nbZgg3PQ8adxFn.u9i1BKc9LXurIz5iZaGI1k8s56qvYOS","NickName":"Bussiness","Status":"active","Avatar":"avatar.JPG","Money":"F6rYcXVfytZkhL/p47g0oQ=="}}
+[2025-09-08 15:01:42.688]	debug.info	service/User.go:67	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-09-08 15:01:42.688]	debug.info	service/User.go:75	密码验证成功	{"user_name": "Bussiness"}
+[2025-09-09 11:08:39.031]	debug.info	service/User.go:72	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-09-09 11:08:39.034]	debug.info	service/User.go:80	密码验证成功	{"user_name": "Bussiness"}
+[2025-09-09 11:14:45.460]	debug.info	service/User.go:72	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-09-09 11:14:45.461]	debug.info	service/User.go:80	密码验证成功	{"user_name": "Bussiness"}
+[2025-09-09 11:16:39.399]	debug.info	service/User.go:72	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-09-09 11:16:39.401]	debug.info	service/User.go:80	密码验证成功	{"user_name": "Bussiness"}
+[2025-09-09 11:19:03.901]	debug.info	service/User.go:72	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-09-09 11:19:03.902]	debug.info	service/User.go:80	密码验证成功	{"user_name": "Bussiness"}
+[2025-09-09 13:31:24.708]	debug.info	service/User.go:72	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-09-09 13:31:24.710]	debug.info	service/User.go:80	密码验证成功	{"user_name": "Bussiness"}
+[2025-09-09 13:41:31.130]	debug.info	service/User.go:72	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-09-09 13:41:31.131]	debug.info	service/User.go:80	密码验证成功	{"user_name": "Bussiness"}
+[2025-09-18 17:40:13.962]	debug.info	service/User.go:73	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-09-18 17:40:13.964]	debug.info	service/User.go:81	密码验证成功	{"user_name": "Bussiness"}
+[2025-09-18 17:45:42.952]	debug.error	service/User.go:109	更新用户信息失败
+[2025-09-18 17:46:38.508]	debug.error	service/User.go:109	更新用户信息失败
+[2025-09-18 17:50:11.550]	debug.error	service/User.go:109	更新用户信息失败
+[2025-09-18 17:54:19.156]	debug.error	service/User.go:89	根据id查询用户信息失败	{"err": "invalid value, should be pointer to struct or slice"}
+[2025-09-18 17:57:00.921]	debug.error	service/User.go:89	根据id查询用户信息失败	{"err": "invalid value, should be pointer to struct or slice"}
+[2025-09-18 17:58:13.930]	debug.error	service/User.go:89	根据id查询用户信息失败	{"err": "invalid value, should be pointer to struct or slice"}
+[2025-09-18 18:00:51.984]	debug.error	service/User.go:109	更新用户信息失败
+[2025-09-18 18:04:14.792]	debug.info	service/User.go:73	用户信息查询成功	{"user_name": "test02"}
+[2025-09-18 18:04:14.793]	debug.error	service/User.go:77	密码验证失败	{"user_name": "test02"}
+[2025-09-18 18:04:53.892]	debug.info	service/User.go:73	用户信息查询成功	{"user_name": "test02"}
+[2025-09-18 18:04:53.893]	debug.info	service/User.go:81	密码验证成功	{"user_name": "test02"}
+[2025-09-18 18:15:07.601]	debug.info	service/User.go:79	用户信息查询成功	{"user_name": "test02"}
+[2025-09-18 18:15:07.602]	debug.info	service/User.go:87	密码验证成功	{"user_name": "test02"}
+[2025-09-18 18:16:35.319]	debug.info	service/User.go:73	用户信息查询成功	{"user_name": "test02"}
+[2025-09-18 18:16:35.320]	debug.info	service/User.go:81	密码验证成功	{"user_name": "test02"}
+[2025-09-19 10:27:11.520]	debug.info	service/User.go:73	用户信息查询成功	{"user_name": "test02"}
+[2025-09-19 10:27:11.521]	debug.info	service/User.go:81	密码验证成功	{"user_name": "test02"}
+[2025-09-19 11:43:05.649]	debug.info	service/User.go:73	用户信息查询成功	{"user_name": "test02"}
+[2025-09-19 11:43:05.650]	debug.info	service/User.go:81	密码验证成功	{"user_name": "test02"}
+[2025-09-19 11:43:47.049]	debug.error	service/User.go:68	Login-用户不存在	{"user_name": "test02"}
+[2025-09-19 11:44:10.588]	debug.info	service/User.go:73	用户信息查询成功	{"user_name": "test2222222"}
+[2025-09-19 11:44:10.589]	debug.error	service/User.go:77	密码验证失败	{"user_name": "test2222222"}
+[2025-09-19 11:44:21.897]	debug.info	service/User.go:73	用户信息查询成功	{"user_name": "test2222222"}
+[2025-09-19 11:44:21.899]	debug.info	service/User.go:81	密码验证成功	{"user_name": "test2222222"}
+[2025-09-19 11:50:52.400]	debug.info	service/User.go:73	用户信息查询成功	{"user_name": "test2222222"}
+[2025-09-19 11:50:52.400]	debug.info	service/User.go:81	密码验证成功	{"user_name": "test2222222"}
+[2025-09-20 15:02:23.164]	debug.info	service/User.go:75	用户信息查询成功	{"user_name": "test2222222"}
+[2025-09-20 15:02:23.166]	debug.info	service/User.go:83	密码验证成功	{"user_name": "test2222222"}
+[2025-09-20 15:03:37.579]	debug.error	middleware/Jwt.go:24	token is empty
+[2025-09-20 15:04:24.547]	debug.error	service/User.go:169	邮件发送失败	{"err": "535 Login fail. Account is abnormal, service is not open, password is incorrect, login frequency limited, or system is busy. More information at https://help.mail.qq.com/detail/108/1023"}
+[2025-09-20 15:06:52.697]	debug.error	service/User.go:169	邮件发送失败	{"err": "535 Login fail. Account is abnormal, service is not open, password is incorrect, login frequency limited, or system is busy. More information at https://help.mail.qq.com/detail/108/1023"}
+[2025-09-20 15:11:07.864]	debug.error	service/User.go:169	邮件发送失败	{"err": "535 Login fail. Account is abnormal, service is not open, password is incorrect, login frequency limited, or system is busy. More information at https://help.mail.qq.com/detail/108/1023"}
+[2025-09-20 17:34:11.482]	debug.info	middleware/Jwt.go:89	claims	{"claims": {"id":2,"email":"2984218079@qq.com","password":"","operation_type":1,"exp":1758403698,"iss":"app"}}

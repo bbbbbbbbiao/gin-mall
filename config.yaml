@@ -1,0 +1,54 @@
+service:
+  app_mode: debug
+  http_host: 127.0.0.1
+  http_port: 8104
+
+mysql:
+  db: mysql
+  db_host: 127.0.0.1
+  db_port: 3306
+  db_user: root
+  db_password: 360520
+  db_name: mall_db_tmp
+  log_mode: info
+  enable_file_log_writer: true #是否启用日志文件
+  log_filename: sql.log #日志文件名
+
+redis:
+  redis_db: redis
+  redis_addr: 127.0.0.1:6379
+  redis_pw:
+  redis_db_name: 2
+
+qiniu:
+  access_key:
+  secret_key:
+  bucket:
+  qiniu_server:
+
+email:
+  valid_email: http://localhost:8080/#/valid/email/
+  smtp_host: smtp.qq.com
+  smtp_email: 2984218079@qq.com
+  smtp_pass: hspmajppdftmdcej
+
+path:
+  host: http://127.0.0.1
+  product_path: /static/imgs/product/
+  avatar_path: /static/imgs/avatar/
+
+
+log:
+  level: info
+  root_dir: ./storage/logs
+  filename: app.log
+  format: #写入格式
+  show_line: true #是否显示调用行
+  max_backups: 3
+  max_size: 500
+  max_age: 28
+  compress: true #是否压缩
+
+jwt:
+  secret: 3Bde3BGEbYqtqyEUzW3ry8jKFcaPH17fRmTmqE7MDr05Lwj95uruRKrrkb44TJ4s
+  jwt_ttl: 43200

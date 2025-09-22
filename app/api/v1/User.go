@@ -3,9 +3,9 @@ package v1
 import (
 	"gin-mall/app/common/request"
 	"gin-mall/app/common/response"
+	"gin-mall/app/serializer"
 	"gin-mall/app/service"
 	"gin-mall/global"
-	"gin-mall/serializer"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 )
@@ -63,7 +63,7 @@ func UserLogin(c *gin.Context) {
 		return
 	}
 
-	response.Success(c, serializer.BuildUserAndToken(user, tokenData))
+	response.Success(c, serializer.BuildToken(user, tokenData))
 }
 
 // 用户修改信息
@@ -81,7 +81,7 @@ func UserUpdateInfo(c *gin.Context) {
 		response.BusinessFail(c, err.Error())
 		return
 	}
-	response.Success(c, serializer.BuildUser(user))
+	response.Success(c, serializer.BuildAvatar(user))
 }
 
 // 上传头像至本地
@@ -124,5 +124,25 @@ func ValidEmail(c *gin.Context) {
 		response.BusinessFail(c, err.Error())
 		return
 	}
-	response.Success(c, serializer.BuildUser(user))
+	response.Success(c, serializer.BuildAvatar(user))
+}
+
+// 显示金额
+func ShowMoney(c *gin.Context) {
+	var showMoney request.ShowMoney
+
+	if err := c.ShouldBind(&showMoney); err != nil {
+		response.BusinessFail(c, request.GetErrorMsg(showMoney, err))
+		return
+	}
+
+	k, _ := c.Get("id")
+	err, user, money := service.UserService.ShowMoney(k.(uint), showMoney)
+
+	if err != nil {
+		response.BusinessFail(c, err.Error())
+		return
+	}
+
+	response.Success(c, serializer.BuildMoney(user, money))
 }

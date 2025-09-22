@@ -51,3 +51,14 @@ type SendEmail struct {
 	OperationType uint   `json:"operation_type" form:"operation_type"`
 	// 1 绑定邮箱， 2 解绑邮箱， 3 修改密码
 }
+
+// 显示金额
+type ShowMoney struct {
+	Key string `json:"key" form:"key" binding:"required"`
+}
+
+func (showMoney ShowMoney) GetMessages() ValidatorMessages {
+	return ValidatorMessages{
+		"key.required": "密钥key不能为空",
+	}
+}

@@ -13,7 +13,13 @@ import (
  * @description: 给前端所要展示的User数据
  */
 
-func BuildUserAndToken(user *model.User, tokenOutPut *service.TokenOutPut) map[string]interface{} {
+type Money struct {
+	UserId    uint   `json:"user_id" form:"user_id"`
+	UserName  string `form:"user_name" json:"user_name"`
+	UserMoney string `form:"user_money" json:"user_money"`
+}
+
+func BuildToken(user *model.User, tokenOutPut *service.TokenOutPut) map[string]interface{} {
 	user.Avatar = global.App.Config.Path.Host + global.App.Config.Path.AvatarPath + user.Avatar
 	return map[string]interface{}{
 		"user":      user,
@@ -21,7 +27,15 @@ func BuildUserAndToken(user *model.User, tokenOutPut *service.TokenOutPut) map[s
 	}
 }
 
-func BuildUser(user *model.User) *model.User {
+func BuildAvatar(user *model.User) *model.User {
 	user.Avatar = global.App.Config.Path.Host + global.App.Config.Path.AvatarPath + user.Avatar
 	return user
+}
+
+func BuildMoney(user *model.User, money string) Money {
+	return Money{
+		UserId:    user.ID,
+		UserName:  user.UserName,
+		UserMoney: money,
+	}
 }

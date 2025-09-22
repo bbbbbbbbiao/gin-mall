@@ -17766,3 +17766,1203 @@ ORDER BY
 
 2025/09/20 17:34:11 E:/研究生/GoStudy/gin-mall/app/dao/User.go:43
 [4.431ms] [rows:1] UPDATE `user` SET `id`=2,`created_at`='2025-09-18 18:03:11',`updated_at`='2025-09-20 17:34:11.483',`user_name`='test2222222',`email`='2984218079@qq.com',`password_digest`='$2a$04$aKL4JdOQUBe8GRN7/G.fHOCaDiCPKtC/6xeDMLac95GhSXtThR5R2',`nick_name`='test2222222',`status`='active',`avatar`='user2/1758254134.jpg',`money`='F6rYcXVfytZkhL/p47g0oQ==' WHERE id = 2 AND `user`.`deleted_at` IS NULL
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[3.375ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[2.427ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'user' AND table_type = 'BASE TABLE'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.982ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.505ms] [rows:-] SELECT * FROM `user` LIMIT 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[2.530ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'user' ORDER BY ORDINAL_POSITION
+
+2025/09/20 22:05:09 
+[0.741ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 
+[0.539ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.706ms] [rows:3] 
+SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	INDEX_NAME,
+	NON_UNIQUE 
+FROM
+	information_schema.STATISTICS 
+WHERE
+	TABLE_SCHEMA = 'mall_db_tmp' 
+	AND TABLE_NAME = 'user' 
+ORDER BY
+	INDEX_NAME,
+	SEQ_IN_INDEX
+
+2025/09/20 22:05:09 
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 
+[1.019ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 
+[1.566ms] [rows:-] SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'mall_db_tmp' AND table_name = 'user' AND constraint_name = 'uni_user_user_name'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.868ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.117ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'user' AND index_name = 'idx_user_deleted_at'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.610ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.271ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'address' AND table_type = 'BASE TABLE'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.693ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.395ms] [rows:-] SELECT * FROM `address` LIMIT 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.458ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'address' ORDER BY ORDINAL_POSITION
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[16.447ms] [rows:0] ALTER TABLE `address` MODIFY COLUMN `name` varchar(20) not null
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[7.506ms] [rows:0] ALTER TABLE `address` MODIFY COLUMN `phone` varchar(11) not null
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[11.528ms] [rows:0] ALTER TABLE `address` MODIFY COLUMN `address` varchar(50) not null
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.528ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.633ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'address' AND index_name = 'idx_address_deleted_at'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.179ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.620ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'admin' AND table_type = 'BASE TABLE'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.581ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.757ms] [rows:-] SELECT * FROM `admin` LIMIT 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.475ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'admin' ORDER BY ORDINAL_POSITION
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.687ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.194ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.531ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'admin' AND index_name = 'idx_admin_deleted_at'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.521ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.118ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'catrgory' AND table_type = 'BASE TABLE'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.254ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.521ms] [rows:-] SELECT * FROM `catrgory` LIMIT 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.418ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'catrgory' ORDER BY ORDINAL_POSITION
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.716ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.518ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'catrgory' AND index_name = 'idx_catrgory_deleted_at'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.611ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.075ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'carousel' AND table_type = 'BASE TABLE'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.555ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.659ms] [rows:-] SELECT * FROM `carousel` LIMIT 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.503ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'carousel' ORDER BY ORDINAL_POSITION
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.593ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.678ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'carousel' AND index_name = 'idx_carousel_deleted_at'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.541ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.509ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'cart' AND table_type = 'BASE TABLE'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.521ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.617ms] [rows:-] SELECT * FROM `cart` LIMIT 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.043ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'cart' ORDER BY ORDINAL_POSITION
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.556ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.197ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.528ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'cart' AND index_name = 'idx_cart_deleted_at'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.521ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.576ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'notice' AND table_type = 'BASE TABLE'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.794ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.704ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.531ms] [rows:-] SELECT * FROM `notice` LIMIT 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.565ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'notice' ORDER BY ORDINAL_POSITION
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.344ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.020ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'notice' AND index_name = 'idx_notice_deleted_at'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.516ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.164ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'product' AND table_type = 'BASE TABLE'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.911ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.518ms] [rows:-] SELECT * FROM `product` LIMIT 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.724ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'product' ORDER BY ORDINAL_POSITION
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.513ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.558ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'product' AND index_name = 'idx_product_deleted_at'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.508ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.569ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.561ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'product_img' AND table_type = 'BASE TABLE'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.547ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.530ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.518ms] [rows:-] SELECT * FROM `product_img` LIMIT 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.493ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'product_img' ORDER BY ORDINAL_POSITION
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.526ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.593ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'product_img' AND index_name = 'idx_product_img_deleted_at'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.667ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.519ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.717ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'order' AND table_type = 'BASE TABLE'
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.702ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.548ms] [rows:-] SELECT * FROM `order` LIMIT 1
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.469ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'order' ORDER BY ORDINAL_POSITION
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:09 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.538ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.426ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'order' AND index_name = 'idx_order_deleted_at'
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.564ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.622ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'favorite' AND table_type = 'BASE TABLE'
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.793ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.605ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.785ms] [rows:-] SELECT * FROM `favorite` LIMIT 1
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.500ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'favorite' ORDER BY ORDINAL_POSITION
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.115ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.719ms] [rows:-] SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'mall_db_tmp' AND table_name = 'favorite' AND constraint_name = 'fk_favorite_user'
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.599ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.026ms] [rows:-] SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'mall_db_tmp' AND table_name = 'favorite' AND constraint_name = 'fk_favorite_product'
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.553ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.517ms] [rows:-] SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'mall_db_tmp' AND table_name = 'favorite' AND constraint_name = 'fk_favorite_boos'
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.511ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/20 22:05:10 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.268ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'favorite' AND index_name = 'idx_favorite_deleted_at'
+
+2025/09/20 22:06:19 E:/研究生/GoStudy/gin-mall/app/dao/User.go:38
+[1.223ms] [rows:1] SELECT * FROM `user` WHERE id = 2 AND `user`.`deleted_at` IS NULL ORDER BY `user`.`id` LIMIT 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.509ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[3.114ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[2.281ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'user' AND table_type = 'BASE TABLE'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[2.193ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.631ms] [rows:-] SELECT * FROM `user` LIMIT 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[2.037ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'user' ORDER BY ORDINAL_POSITION
+
+2025/09/21 20:02:18 
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 
+[0.503ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[2.951ms] [rows:3] 
+SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	INDEX_NAME,
+	NON_UNIQUE 
+FROM
+	information_schema.STATISTICS 
+WHERE
+	TABLE_SCHEMA = 'mall_db_tmp' 
+	AND TABLE_NAME = 'user' 
+ORDER BY
+	INDEX_NAME,
+	SEQ_IN_INDEX
+
+2025/09/21 20:02:18 
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 
+[1.018ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 
+[1.759ms] [rows:-] SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'mall_db_tmp' AND table_name = 'user' AND constraint_name = 'uni_user_user_name'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.775ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.543ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'user' AND index_name = 'idx_user_deleted_at'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.677ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.603ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.401ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'address' AND table_type = 'BASE TABLE'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.516ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.514ms] [rows:-] SELECT * FROM `address` LIMIT 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.305ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'address' ORDER BY ORDINAL_POSITION
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[13.469ms] [rows:0] ALTER TABLE `address` MODIFY COLUMN `name` varchar(20) not null
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[9.015ms] [rows:0] ALTER TABLE `address` MODIFY COLUMN `phone` varchar(11) not null
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[14.455ms] [rows:0] ALTER TABLE `address` MODIFY COLUMN `address` varchar(50) not null
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.832ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.940ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'address' AND index_name = 'idx_address_deleted_at'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.555ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.916ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'admin' AND table_type = 'BASE TABLE'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.503ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.721ms] [rows:-] SELECT * FROM `admin` LIMIT 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.327ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'admin' ORDER BY ORDINAL_POSITION
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.742ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.505ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'admin' AND index_name = 'idx_admin_deleted_at'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.581ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.087ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'catrgory' AND table_type = 'BASE TABLE'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.706ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.513ms] [rows:-] SELECT * FROM `catrgory` LIMIT 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.317ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'catrgory' ORDER BY ORDINAL_POSITION
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.276ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.170ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'catrgory' AND index_name = 'idx_catrgory_deleted_at'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.561ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.930ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'carousel' AND table_type = 'BASE TABLE'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.308ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.610ms] [rows:-] SELECT * FROM `carousel` LIMIT 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.255ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'carousel' ORDER BY ORDINAL_POSITION
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.594ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.644ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'carousel' AND index_name = 'idx_carousel_deleted_at'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.634ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.690ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.735ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'cart' AND table_type = 'BASE TABLE'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.579ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.563ms] [rows:-] SELECT * FROM `cart` LIMIT 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.268ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'cart' ORDER BY ORDINAL_POSITION
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.518ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.253ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'cart' AND index_name = 'idx_cart_deleted_at'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.507ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.483ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'notice' AND table_type = 'BASE TABLE'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.579ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.598ms] [rows:-] SELECT * FROM `notice` LIMIT 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.554ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'notice' ORDER BY ORDINAL_POSITION
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.548ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.679ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'notice' AND index_name = 'idx_notice_deleted_at'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.716ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.141ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.031ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'product' AND table_type = 'BASE TABLE'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.882ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.502ms] [rows:-] SELECT * FROM `product` LIMIT 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.511ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'product' ORDER BY ORDINAL_POSITION
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.504ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.735ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'product' AND index_name = 'idx_product_deleted_at'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.595ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.961ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'product_img' AND table_type = 'BASE TABLE'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.509ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.509ms] [rows:-] SELECT * FROM `product_img` LIMIT 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.508ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'product_img' ORDER BY ORDINAL_POSITION
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.074ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.805ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'product_img' AND index_name = 'idx_product_img_deleted_at'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.503ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.629ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.556ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'order' AND table_type = 'BASE TABLE'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.512ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.515ms] [rows:-] SELECT * FROM `order` LIMIT 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.655ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'order' ORDER BY ORDINAL_POSITION
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.520ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.521ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'order' AND index_name = 'idx_order_deleted_at'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.522ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.536ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'favorite' AND table_type = 'BASE TABLE'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.540ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.513ms] [rows:-] SELECT * FROM `favorite` LIMIT 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.591ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'favorite' ORDER BY ORDINAL_POSITION
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.727ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.555ms] [rows:-] SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'mall_db_tmp' AND table_name = 'favorite' AND constraint_name = 'fk_favorite_user'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.535ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.086ms] [rows:-] SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'mall_db_tmp' AND table_name = 'favorite' AND constraint_name = 'fk_favorite_product'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.504ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.646ms] [rows:-] SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'mall_db_tmp' AND table_name = 'favorite' AND constraint_name = 'fk_favorite_boos'
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.039ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/21 20:02:18 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.562ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'favorite' AND index_name = 'idx_favorite_deleted_at'
+
+2025/09/21 20:03:21 E:/研究生/GoStudy/gin-mall/app/dao/Carousel.go:22
+[1.221ms] [rows:1] SELECT * FROM `carousel` WHERE `carousel`.`deleted_at` IS NULL
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.508ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.687ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[2.187ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'user' AND table_type = 'BASE TABLE'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.584ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[2.430ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.230ms] [rows:-] SELECT * FROM `user` LIMIT 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[4.115ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'user' ORDER BY ORDINAL_POSITION
+
+2025/09/22 09:45:16 
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 
+[1.132ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.314ms] [rows:3] 
+SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	INDEX_NAME,
+	NON_UNIQUE 
+FROM
+	information_schema.STATISTICS 
+WHERE
+	TABLE_SCHEMA = 'mall_db_tmp' 
+	AND TABLE_NAME = 'user' 
+ORDER BY
+	INDEX_NAME,
+	SEQ_IN_INDEX
+
+2025/09/22 09:45:16 
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 
+[0.608ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 
+[1.113ms] [rows:-] SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'mall_db_tmp' AND table_name = 'user' AND constraint_name = 'uni_user_user_name'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.612ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.295ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.049ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'user' AND index_name = 'idx_user_deleted_at'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.503ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.518ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.574ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'address' AND table_type = 'BASE TABLE'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.659ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.511ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.532ms] [rows:-] SELECT * FROM `address` LIMIT 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.789ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'address' ORDER BY ORDINAL_POSITION
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[13.968ms] [rows:0] ALTER TABLE `address` MODIFY COLUMN `name` varchar(20) not null
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[9.066ms] [rows:0] ALTER TABLE `address` MODIFY COLUMN `phone` varchar(11) not null
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[9.317ms] [rows:0] ALTER TABLE `address` MODIFY COLUMN `address` varchar(50) not null
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.502ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.558ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'address' AND index_name = 'idx_address_deleted_at'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.633ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.535ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'admin' AND table_type = 'BASE TABLE'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.611ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT * FROM `admin` LIMIT 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.118ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'admin' ORDER BY ORDINAL_POSITION
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.505ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.532ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'admin' AND index_name = 'idx_admin_deleted_at'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.697ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'catrgory' AND table_type = 'BASE TABLE'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.715ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT * FROM `catrgory` LIMIT 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.604ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'catrgory' ORDER BY ORDINAL_POSITION
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.649ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.626ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'catrgory' AND index_name = 'idx_catrgory_deleted_at'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.692ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'carousel' AND table_type = 'BASE TABLE'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.767ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT * FROM `carousel` LIMIT 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.618ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'carousel' ORDER BY ORDINAL_POSITION
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.690ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.517ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'carousel' AND index_name = 'idx_carousel_deleted_at'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.579ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.528ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'cart' AND table_type = 'BASE TABLE'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.519ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT * FROM `cart` LIMIT 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.513ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'cart' ORDER BY ORDINAL_POSITION
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.703ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.519ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'cart' AND index_name = 'idx_cart_deleted_at'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.632ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.512ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'notice' AND table_type = 'BASE TABLE'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.648ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT * FROM `notice` LIMIT 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.542ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'notice' ORDER BY ORDINAL_POSITION
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.631ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.706ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'notice' AND index_name = 'idx_notice_deleted_at'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.641ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.546ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'product' AND table_type = 'BASE TABLE'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.710ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT * FROM `product` LIMIT 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[1.030ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'product' ORDER BY ORDINAL_POSITION
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.646ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.617ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'product' AND index_name = 'idx_product_deleted_at'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.530ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.524ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'product_img' AND table_type = 'BASE TABLE'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT * FROM `product_img` LIMIT 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.522ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'product_img' ORDER BY ORDINAL_POSITION
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.503ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'product_img' AND index_name = 'idx_product_img_deleted_at'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.515ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'order' AND table_type = 'BASE TABLE'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.723ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT * FROM `order` LIMIT 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.633ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'order' ORDER BY ORDINAL_POSITION
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.537ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.530ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'order' AND index_name = 'idx_order_deleted_at'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.563ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.629ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'mall_db_tmp' AND table_name = 'favorite' AND table_type = 'BASE TABLE'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.525ms] [rows:-] SELECT * FROM `favorite` LIMIT 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.565ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'mall_db_tmp' AND table_name = 'favorite' ORDER BY ORDINAL_POSITION
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.696ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'mall_db_tmp' AND table_name = 'favorite' AND constraint_name = 'fk_favorite_user'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.512ms] [rows:-] SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'mall_db_tmp' AND table_name = 'favorite' AND constraint_name = 'fk_favorite_product'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.666ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.630ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.530ms] [rows:-] SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'mall_db_tmp' AND table_name = 'favorite' AND constraint_name = 'fk_favorite_boos'
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.523ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'mall_db_tmp%' ORDER BY SCHEMA_NAME='mall_db_tmp' DESC,SCHEMA_NAME limit 1
+
+2025/09/22 09:45:16 E:/研究生/GoStudy/gin-mall/app/dao/migration.go:19
+[0.554ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'mall_db_tmp' AND table_name = 'favorite' AND index_name = 'idx_favorite_deleted_at'
+
+2025/09/22 09:45:26 E:/研究生/GoStudy/gin-mall/app/dao/Carousel.go:22
+[1.400ms] [rows:2] SELECT * FROM `carousel` WHERE `carousel`.`deleted_at` IS NULL

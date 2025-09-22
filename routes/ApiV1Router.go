@@ -34,8 +34,13 @@ func ApiV1Router(routerGroup *gin.RouterGroup) {
 		userGroup.POST("/user/uploadAvatar", v1.UploadAvatarToLocal)
 		// 发送邮件
 		userGroup.POST("/user/sendEmail", v1.SendEmail)
+		//显示金额
+		userGroup.POST("/user/showMoney", v1.ShowMoney)
 	}
 
 	// 验证邮箱
 	routerGroup.POST("/user/validEmail", middleware.ParseEmailJWTAuth(service.AppGuardName), v1.ValidEmail)
+
+	// 获取轮播图
+	routerGroup.GET("/carousels", v1.GetCarousels)
 }

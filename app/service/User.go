@@ -176,6 +176,7 @@ func (u *userService) SendEmail(id uint, params request.SendEmail) (err error) {
 	return nil
 }
 
+// 验证邮件
 func (u *userService) ValidEmail(c *gin.Context) (err error, user *model.User) {
 	id, _ := c.Get("id")
 	password, _ := c.Get("password")
@@ -207,4 +208,18 @@ func (u *userService) ValidEmail(c *gin.Context) (err error, user *model.User) {
 	}
 
 	return nil, user
+}
+
+// 显示金额
+func (u *userService) ShowMoney(id uint, params request.ShowMoney) (err error, user *model.User, money string) {
+
+	user, err = dao.UserDao.GetUserById(id)
+	if err != nil {
+		global.App.Log.Error("用户信息查询失败", zap.Any("err", err))
+		return err, user, ""
+	}
+
+	utils.Encrypt.SetKey(params.Key) // 给钥匙插上钥匙，为的是给金额解锁
+	money = utils.Encrypt.AesDecoding(user.Money)
+	return nil, user, money
 }

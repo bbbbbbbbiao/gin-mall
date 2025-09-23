@@ -88,7 +88,7 @@ func getZapCore() zapcore.Core {
 	return zapcore.NewCore(encoder, getLogWriter(), level)
 }
 
-// 使用 lumberjack 作为日志写入器
+// 使用 lumberjack 作为日志写入器，同时输出到文件和控制台
 func getLogWriter() zapcore.WriteSyncer {
 	file := &lumberjack.Logger{
 		Filename:   global.App.Config.Log.RootDir + "/" + global.App.Config.Log.Filename,
@@ -98,5 +98,8 @@ func getLogWriter() zapcore.WriteSyncer {
 		Compress:   global.App.Config.Log.Compress,
 	}
 
-	return zapcore.AddSync(file)
+	return zapcore.NewMultiWriteSyncer(
+		zapcore.AddSync(file),
+		zapcore.AddSync(os.Stdout),
+	)
 }

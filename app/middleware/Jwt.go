@@ -17,7 +17,7 @@ import (
  */
 
 // 解析JWT
-func ParseJWtAuth(guardName string) gin.HandlerFunc {
+func ParseJWTAuth(guardName string) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		tokenStr := c.GetHeader("Authorization")
 		if tokenStr == "" {

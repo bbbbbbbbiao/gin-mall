@@ -67,3 +67,4 @@
 [2025-09-20 15:11:07.864]	debug.error	service/User.go:169	邮件发送失败	{"err": "535 Login fail. Account is abnormal, service is not open, password is incorrect, login frequency limited, or system is busy. More information at https://help.mail.qq.com/detail/108/1023"}
 [2025-09-20 17:34:11.482]	debug.info	middleware/Jwt.go:89	claims	{"claims": {"id":2,"email":"2984218079@qq.com","password":"","operation_type":1,"exp":1758403698,"iss":"app"}}
 [2025-09-20 22:05:46.051]	debug.error	middleware/Jwt.go:24	token 是空的
+[2025-09-22 10:58:24.939]	debug.error	middleware/Jwt.go:74	解析EmailToken失败，	{"err": "invalid character '&' looking for beginning of value"}

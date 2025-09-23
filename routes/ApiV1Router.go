@@ -25,17 +25,19 @@ func ApiV1Router(routerGroup *gin.RouterGroup) {
 	// 用户登录
 	routerGroup.POST("/user/login", v1.UserLogin)
 
-	// 中间件鉴权
-	userGroup := routerGroup.Group("").Use(middleware.ParseJWtAuth(service.AppGuardName))
+	// 用户中间件鉴权
+	userGroup := routerGroup.Group("").Use(middleware.ParseJWTAuth(service.AppGuardName))
 	{
-		// 修改用户信息
-		userGroup.POST("/user/update", v1.UserUpdateInfo)
-		// 上传图片
-		userGroup.POST("/user/uploadAvatar", v1.UploadAvatarToLocal)
-		// 发送邮件
-		userGroup.POST("/user/sendEmail", v1.SendEmail)
-		//显示金额
-		userGroup.POST("/user/showMoney", v1.ShowMoney)
+
+		// 用户操作
+		userGroup.POST("/user/update", v1.UserUpdateInfo) // 修改用户信息
+
+		userGroup.POST("/user/uploadAvatar", v1.UploadAvatarToLocal) // 上传图片
+
+		userGroup.POST("/user/sendEmail", v1.SendEmail) // 发送邮件
+
+		userGroup.POST("/user/showMoney", v1.ShowMoney) //显示金额
+
 	}
 
 	// 验证邮箱
@@ -43,4 +45,11 @@ func ApiV1Router(routerGroup *gin.RouterGroup) {
 
 	// 获取轮播图
 	routerGroup.GET("/carousels", v1.GetCarousels)
+
+	// 商品中间件鉴权
+	produceGroup := routerGroup.Group("").Use(middleware.ParseJWTAuth(service.AppGuardName))
+	{
+		// 商品操作
+		produceGroup.POST("/produce/uploadProduce", v1.UploadProduct) // 上传商品
+	}
 }

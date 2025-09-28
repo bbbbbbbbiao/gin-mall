@@ -20,7 +20,7 @@ func Migration(db *gorm.DB) {
 		&model2.User{},
 		&model2.Address{},
 		&model2.Admin{},
-		&model2.Catrgory{},
+		&model2.Category{},
 		&model2.Carousel{},
 		&model2.Cart{},
 		&model2.Notice{},

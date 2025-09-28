@@ -123,7 +123,7 @@ func (u *userService) UploadAvatarToLocal(id uint, file multipart.File) (err err
 		return
 	}
 	// 上传图片至本地
-	err, filePath = UploadService.UploadAvatarToLocalStatic(id, file)
+	err, filePath = UploadService.UploadAvatarToLocalStatic(id, file, 0)
 	if err != nil {
 		global.App.Log.Error("用户上传图片至本地失败", zap.Any("err", err))
 		return

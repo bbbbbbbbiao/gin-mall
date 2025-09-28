@@ -68,3 +68,20 @@
 [2025-09-20 17:34:11.482]	debug.info	middleware/Jwt.go:89	claims	{"claims": {"id":2,"email":"2984218079@qq.com","password":"","operation_type":1,"exp":1758403698,"iss":"app"}}
 [2025-09-20 22:05:46.051]	debug.error	middleware/Jwt.go:24	token 是空的
 [2025-09-22 10:58:24.939]	debug.error	middleware/Jwt.go:74	解析EmailToken失败，	{"err": "invalid character '&' looking for beginning of value"}
+[2025-09-25 10:57:33.925]	debug.info	service/User.go:76	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-09-25 10:57:33.927]	debug.info	service/User.go:84	密码验证成功	{"user_name": "Bussiness"}
+[2025-09-25 13:00:00.092]	debug.error	model/Product.go:42	Redis-获取商品的浏览量失败	{"err": "strconv.ParseInt: parsing \"\": invalid syntax"}
+[2025-09-25 13:20:30.755]	debug.error	model/Product.go:51	Redis-获取商品的浏览量失败	{"err": "strconv.ParseInt: parsing \"\": invalid syntax"}
+[2025-09-26 10:18:38.107]	debug.error	middleware/Jwt.go:24	token 是空的
+[2025-09-26 10:18:43.584]	debug.info	service/User.go:76	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-09-26 10:18:43.584]	debug.info	service/User.go:84	密码验证成功	{"user_name": "Bussiness"}
+[2025-09-26 10:19:29.568]	debug.error	service/Product.go:131	商品信息搜索失败	{"err": "sql: expected 3 arguments, got 2"}
+[2025-09-26 10:20:07.451]	debug.error	service/Product.go:131	商品信息搜索失败	{"err": "sql: expected 3 arguments, got 2"}
+[2025-09-26 10:21:43.053]	debug.error	service/Product.go:131	商品信息搜索失败	{"err": "sql: expected 3 arguments, got 2"}
+[2025-09-26 10:24:12.471]	debug.error	service/Product.go:142	获取商品信息失败，id：	{"id": 8}
+[2025-09-26 10:26:36.877]	debug.error	service/Product.go:142	获取商品信息失败，id：	{"id": 2}
+[2025-09-26 14:32:18.794]	debug.error	service/Product.go:142	获取商品信息失败，id：	{"id": 1}
+[2025-09-26 14:36:06.591]	debug.error	service/Product.go:146	未找到对应的商品	{"id": 1}
+[2025-09-26 14:36:37.775]	debug.error	service/Product.go:145	未找到对应的商品	{"id": 1}
+[2025-09-26 14:37:39.528]	debug.error	service/Product.go:145	未找到对应的商品	{"id": 8}
+[2025-09-26 14:40:25.400]	debug.error	service/Product.go:142	获取商品信息失败，id：	{"id": 90}

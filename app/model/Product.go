@@ -3,6 +3,7 @@ package model
 import (
 	"context"
 	"gin-mall/global"
+	"github.com/go-redis/redis/v8"
 	"go.uber.org/zap"
 	"gorm.io/gorm"
 	"strconv"
@@ -36,7 +37,23 @@ func (p *Product) GetProductKey() string {
 }
 
 func (p *Product) GetView() int64 {
+
 	res, err := global.App.Redis.Get(context.Background(), p.GetProductKey()).Result()
+
+	if err != nil {
+		if err == redis.Nil {
+			err := global.App.Redis.Set(context.Background(), p.GetProductKey(), 0, 0).Err()
+			if err != nil {
+				global.App.Log.Error("Redis-初始化商品浏览量失败", zap.Any("err", err))
+				return -1
+			}
+			return 0
+		} else {
+			global.App.Log.Error("Redis-其他错误", zap.Any("err", err))
+			return -1
+		}
+	}
+
 	resInt, err := strconv.ParseInt(res, 10, 64)
 	if err != nil {
 		global.App.Log.Error("Redis-获取商品的浏览量失败", zap.Any("err", err))

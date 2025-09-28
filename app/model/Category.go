@@ -9,7 +9,7 @@ import "gorm.io/gorm"
  * @description: 商品种类信息
  */
 
-type Catrgory struct {
+type Category struct {
 	gorm.Model
 	CatrgoryName string
 }

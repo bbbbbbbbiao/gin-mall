@@ -9,7 +9,7 @@ import (
  * @author: biao
  * @date: 2025/9/22 18:21
  * @code: 彼方尚有荣光在
- * @description:
+ * @description: 返回的商品信息
  */
 
 type Product struct {
@@ -48,4 +48,11 @@ func BuildProduct(product *model.Product) *Product {
 		BossName:      product.BossName,
 		BossAvatar:    global.App.Config.Path.Host + global.App.Config.Path.AvatarPath + product.BossAvatar,
 	}
+}
+
+func BuildProductList(products []*model.Product) (productList []*Product) {
+	for _, product := range products {
+		productList = append(productList, BuildProduct(product))
+	}
+	return
 }

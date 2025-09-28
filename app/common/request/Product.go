@@ -1,6 +1,8 @@
 package request
 
-import "gin-mall/app/model"
+import (
+	"gin-mall/app/model"
+)
 
 /**
  * @author: biao
@@ -21,4 +23,9 @@ type ProductInfo struct {
 	OnSale        string `json:"on_sale" form:"on_sale"`
 	Num           int    `json:"num" form:"num"`
 	model.BasePage
+}
+
+type ProductImgInfo struct {
+	Id        uint `json:"id" json:"id" form:"id"`
+	ProductId uint `json:"product_id" json:"product_id" form:"product_id"`
 }

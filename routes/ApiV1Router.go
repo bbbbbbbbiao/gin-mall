@@ -47,9 +47,19 @@ func ApiV1Router(routerGroup *gin.RouterGroup) {
 	routerGroup.GET("/carousels", v1.GetCarousels)
 
 	// 商品中间件鉴权
-	produceGroup := routerGroup.Group("").Use(middleware.ParseJWTAuth(service.AppGuardName))
+	productGroup := routerGroup.Group("").Use(middleware.ParseJWTAuth(service.AppGuardName))
 	{
 		// 商品操作
-		produceGroup.POST("/produce/uploadProduce", v1.UploadProduct) // 上传商品
+		productGroup.POST("/product/uploadProduct", v1.UploadProduct) // 上传商品
+
+		productGroup.POST("/product/searchProduct", v1.SearchProduct) // 搜索商品
 	}
+	// 商品列表展示（可以按分类展示）
+	routerGroup.POST("/product/list", v1.ProductList)
+	// 获取商品信息
+	routerGroup.POST("/product/productInfo/:id", v1.ProductInfoById)
+	// 获取商品图片信息
+	routerGroup.POST("/product/productImg/:id", v1.ProductImgInfoById)
+	// 获取商品分类信息
+	routerGroup.POST("/product/categories", v1.Categories)
 }

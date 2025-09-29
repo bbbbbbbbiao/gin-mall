@@ -15,6 +15,6 @@ type Favorite struct {
 	UserId    uint `gorm:"not null"`
 	Product   Product
 	ProductId uint `gorm:"not null"`
-	Boos      User
-	BoosId    uint `gorm:"not null"`
+	Boss      User
+	BossId    uint `gorm:"not null"`
 }

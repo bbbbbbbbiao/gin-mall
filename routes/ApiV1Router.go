@@ -38,6 +38,15 @@ func ApiV1Router(routerGroup *gin.RouterGroup) {
 
 		userGroup.POST("/user/showMoney", v1.ShowMoney) //显示金额
 
+		// 收藏夹操作
+		userGroup.POST("/favorite/add", v1.FavoriteAdd) // 添加收藏商品
+
+		userGroup.POST("/favorite/delete?:id", v1.FavoriteDelete) // 删除收藏商品
+
+		userGroup.POST("/favorite/list", v1.FavoriteList) // 获取收藏夹商品列表
+
+		// 显示收藏夹中某个商品信息
+
 	}
 
 	// 验证邮箱
@@ -62,4 +71,17 @@ func ApiV1Router(routerGroup *gin.RouterGroup) {
 	routerGroup.POST("/product/productImg/:id", v1.ProductImgInfoById)
 	// 获取商品分类信息
 	routerGroup.POST("/product/categories", v1.Categories)
+
+	// 地址操作
+	addressGroup := routerGroup.Group("/address").Use(middleware.ParseJWTAuth(service.AppGuardName))
+	{
+		// 添加地址
+		addressGroup.POST("/add", v1.AddAddress)
+		// 删除地址
+		addressGroup.POST("/delete/:id", v1.DeleteAddress)
+		// 获取地址列表
+		addressGroup.POST("/list", v1.ListAddress)
+		// 更新地址
+		addressGroup.POST("/update/:id", v1.UpdateAddress)
+	}
 }

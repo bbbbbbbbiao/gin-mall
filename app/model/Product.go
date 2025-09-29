@@ -23,7 +23,7 @@ type Product struct {
 	Title         string // 商品标题
 	Info          string // 商品详情信息
 	ImgPath       string // 图片地址
-	Prince        string //价格
+	Price         string //价格
 	DiscountPrice string // 折扣后的价格
 	OnSale        bool   // 是否在售
 	Num           int    // 数量

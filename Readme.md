@@ -1,6 +1,24 @@
+## git仓库代理指令
+
+### （一）、设置代理
+
+```shell
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy https://127.0.0.1:7890
+```
+
+### （二）、取消代理
+
+```shell
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
+
+
+
 ## 需要完善的点
 
-#### （一）、完善事务管理
+### （一）、完善事务管理
 
 ![image-20250928143821727](C:\Users\baibiao\AppData\Roaming\Typora\typora-user-images\image-20250928143821727.png)
 
@@ -35,4 +53,13 @@ func Transaction(fn func(tx *gorm.DB) error) error {
     return tx.Commit().Error
 }
 ```
+### （二）、完善响应的错误码
+
+### （三）、完善请求体及其校验
+
+### （四）、完善商品浏览量点击接口
+
+### (五)、完善请求体，响应体的命名（DTO, VO, PO, DO, Entity）
+
+
 

@@ -11,7 +11,14 @@ import "gin-mall/app/model"
 
 type Favorite struct {
 	UserId    uint `json:"user_id" form:"user_id"`
-	ProductId uint `json:"product_id" form:"product_id"`
-	BossId    uint `json:"boss_id" form:"boss_id"`
+	ProductId uint `json:"product_id" form:"product_id" binding:"required"`
+	BossId    uint `json:"boss_id" form:"boss_id" binding:"required"`
 	model.BasePage
+}
+
+func (favorite Favorite) GetMessages() ValidatorMessages {
+	return ValidatorMessages{
+		"product_id.required": "商品ID不能为空",
+		"boss_id.required":    "商家ID不能为空",
+	}
 }

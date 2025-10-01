@@ -66,3 +66,15 @@ func (productDao *productDao) Categories() (err error, categoryList []*model.Cat
 	err = global.App.DB.Find(&categoryList).Error
 	return
 }
+
+// 检查商品是否存在
+func (productDao *productDao) ProductIsExist(productId uint, bossId uint) (exist bool, err error) {
+	var count int64
+	err = global.App.DB.Model(&model.Product{}).Where("id = ? and boss_id = ?", productId, bossId).Count(&count).Error
+
+	if err != nil {
+		return false, err
+	}
+
+	return count > 0, nil
+}

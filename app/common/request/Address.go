@@ -13,7 +13,7 @@ type Address struct {
 	Address string `json:"address" form:"address" binding:"required"`
 }
 
-func (a *Address) GetMessages() ValidatorMessages {
+func (a Address) GetMessages() ValidatorMessages {
 	return ValidatorMessages{
 		"name.required":    "姓名不能为空",
 		"phone.required":   "手机号不能为空",

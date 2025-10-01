@@ -41,7 +41,7 @@ func ApiV1Router(routerGroup *gin.RouterGroup) {
 		// 收藏夹操作
 		userGroup.POST("/favorite/add", v1.FavoriteAdd) // 添加收藏商品
 
-		userGroup.POST("/favorite/delete?:id", v1.FavoriteDelete) // 删除收藏商品
+		userGroup.POST("/favorite/delete/:id", v1.FavoriteDelete) // 删除收藏商品
 
 		userGroup.POST("/favorite/list", v1.FavoriteList) // 获取收藏夹商品列表
 

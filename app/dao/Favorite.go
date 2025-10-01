@@ -18,7 +18,7 @@ type favoriteDao struct {
 var FavoriteDao = new(favoriteDao)
 
 // 检查收藏夹中商品是否存在
-func (favoriteDao *favoriteDao) ProductIsExist(userId uint, productId uint) (bool, error) {
+func (favoriteDao *favoriteDao) FavoriteIsExist(userId uint, productId uint) (bool, error) {
 	var count int64
 	err := global.App.DB.Model(&model.Favorite{}).Where("user_id = ? and product_id = ?", userId, productId).Count(&count).Error
 
@@ -30,7 +30,7 @@ func (favoriteDao *favoriteDao) ProductIsExist(userId uint, productId uint) (boo
 
 // 添加收藏夹商品
 func (favoriteDao *favoriteDao) FavoriteAdd(favorite *model.Favorite) error {
-	return global.App.DB.Create(&favorite).Error
+	return global.App.DB.Create(favorite).Error
 }
 
 func (favoriteDao *favoriteDao) FavoriteList(id uint) (favoriteList []*model.Favorite, err error) {

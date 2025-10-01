@@ -1,6 +1,7 @@
 package service
 
 import (
+	"fmt"
 	"gin-mall/app/common/request"
 	"gin-mall/app/dao"
 	"gin-mall/app/model"
@@ -39,6 +40,7 @@ func (a *addressService) AddAddress(userId uint, params request.Address) (addres
 
 // DeleteAddress 删除地址
 func (a *addressService) DeleteAddress(userId uint, addressId uint) (address *model.Address, err error) {
+	fmt.Println("删除地址", userId, addressId)
 	address, err = dao.AddressDao.DeleteAddress(userId, addressId)
 	if err != nil {
 		global.App.Log.Error("删除地址失败", zap.Error(err))
@@ -62,6 +64,7 @@ func (a *addressService) ListAddress(userId uint) (addressList []*model.Address,
 // UpdateAddress 更新地址
 func (a *addressService) UpdateAddress(userId uint, addressId uint, params request.Address) (address *model.Address, err error) {
 	address = &model.Address{
+
 		UserID:  userId,
 		Name:    params.Name,
 		Phone:   params.Phone,

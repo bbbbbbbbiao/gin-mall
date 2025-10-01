@@ -26,9 +26,9 @@ func AddAddress(c *gin.Context) {
 	}
 
 	id, _ := c.Get("id")
-	userId := uint(id.(int64))
+	userId := id.(uint)
 	// 保存地址
-	address, err := service.AddressService.AddAddress(userId, addAddress)
+	address, err := service.AddressService.AddAddress(uint(userId), addAddress)
 	if err != nil {
 		response.BusinessFail(c, err.Error())
 		return
@@ -38,19 +38,12 @@ func AddAddress(c *gin.Context) {
 }
 
 func DeleteAddress(c *gin.Context) {
-	var deleteAddress request.Address
-
-	if err := c.ShouldBind(&deleteAddress); err != nil {
-		response.ValidateFail(c, request.GetErrorMsg(deleteAddress, err))
-		return
-	}
-
 	id, _ := c.Get("id")
-	userId := uint(id.(int64))
+	userId := id.(uint)
 	idStr := c.Param("id")
-	deleteId, _ := strconv.Atoi(idStr)
+	deleteId, _ := strconv.ParseUint(idStr, 10, 0)
 	// 删除地址
-	address, err := service.AddressService.DeleteAddress(userId, uint(deleteId))
+	address, err := service.AddressService.DeleteAddress(uint(userId), uint(deleteId))
 	if err != nil {
 		response.BusinessFail(c, err.Error())
 		return
@@ -61,9 +54,9 @@ func DeleteAddress(c *gin.Context) {
 // ListAddress 获取地址列表
 func ListAddress(c *gin.Context) {
 	id, _ := c.Get("id")
-	userId := uint(id.(int64))
+	userId := id.(uint)
 	// 获取地址列表
-	addressList, err := service.AddressService.ListAddress(userId)
+	addressList, err := service.AddressService.ListAddress(uint(userId))
 	if err != nil {
 		response.BusinessFail(c, err.Error())
 		return
@@ -81,12 +74,12 @@ func UpdateAddress(c *gin.Context) {
 	}
 
 	id, _ := c.Get("id")
-	userId := uint(id.(int64))
+	userId := id.(uint)
 	idStr := c.Param("id")
-	updateId, _ := strconv.Atoi(idStr)
+	updateId, _ := strconv.ParseUint(idStr, 10, 0)
 
 	// 更新地址
-	address, err := service.AddressService.UpdateAddress(userId, uint(updateId), updateAddress)
+	address, err := service.AddressService.UpdateAddress(uint(userId), uint(updateId), updateAddress)
 	if err != nil {
 		response.BusinessFail(c, err.Error())
 		return

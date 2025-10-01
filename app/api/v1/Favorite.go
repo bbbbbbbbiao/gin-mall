@@ -21,7 +21,7 @@ func FavoriteAdd(c *gin.Context) {
 	var favoriteAdd request.Favorite
 
 	if err := c.ShouldBind(&favoriteAdd); err != nil {
-		response.BusinessFail(c, err.Error())
+		response.BusinessFail(c, request.GetErrorMsg(favoriteAdd, err))
 		return
 	}
 

@@ -85,3 +85,31 @@
 [2025-09-26 14:36:37.775]	debug.error	service/Product.go:145	未找到对应的商品	{"id": 1}
 [2025-09-26 14:37:39.528]	debug.error	service/Product.go:145	未找到对应的商品	{"id": 8}
 [2025-09-26 14:40:25.400]	debug.error	service/Product.go:142	获取商品信息失败，id：	{"id": 90}
+[2025-09-29 21:22:55.925]	debug.error	middleware/Jwt.go:24	token 是空的
+[2025-09-29 21:23:13.442]	debug.info	service/User.go:76	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-09-29 21:23:13.442]	debug.info	service/User.go:84	密码验证成功	{"user_name": "Bussiness"}
+[2025-09-29 21:59:19.340]	debug.error	service/Product.go:142	获取商品信息失败，id：	{"id": 90}
+[2025-09-29 22:21:07.531]	debug.error	middleware/Jwt.go:24	token 是空的
+[2025-09-30 14:06:35.928]	debug.info	service/User.go:76	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-09-30 14:06:35.930]	debug.info	service/User.go:84	密码验证成功	{"user_name": "Bussiness"}
+[2025-09-30 14:13:54.134]	debug.error	middleware/Jwt.go:24	token 是空的
+[2025-09-30 14:14:06.562]	debug.info	service/User.go:76	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-09-30 14:14:06.565]	debug.info	service/User.go:84	密码验证成功	{"user_name": "Bussiness"}
+[2025-09-30 14:14:29.231]	debug.error	service/Favorite.go:46	添加收藏夹失败	{"error": "Error 1364 (HY000): Field 'boos_id' doesn't have a default value"}
+[2025-09-30 21:47:02.677]	debug.error	service/Favorite.go:34	该商品不存在	{"err": null}
+[2025-09-30 21:53:27.419]	debug.error	service/Favorite.go:35	该商品不存在	{"err": null}
+[2025-09-30 21:53:41.223]	debug.error	service/Favorite.go:35	该商品不存在	{"err": null}
+[2025-09-30 21:53:47.409]	debug.error	service/Favorite.go:59	添加收藏夹失败	{"error": "Error 1364 (HY000): Field 'boos_id' doesn't have a default value"}
+[2025-09-30 21:58:59.810]	debug.error	service/Favorite.go:61	添加收藏夹失败	{"error": "Error 1364 (HY000): Field 'boos_id' doesn't have a default value"}
+[2025-09-30 21:59:41.212]	debug.error	service/Favorite.go:61	添加收藏夹失败	{"error": "Error 1364 (HY000): Field 'boos_id' doesn't have a default value"}
+[2025-09-30 22:00:49.333]	debug.error	service/Favorite.go:59	添加收藏夹失败	{"error": "Error 1364 (HY000): Field 'boos_id' doesn't have a default value"}
+[2025-09-30 22:02:04.885]	debug.error	service/Favorite.go:59	添加收藏夹失败	{"error": "Error 1364 (HY000): Field 'boos_id' doesn't have a default value"}
+[2025-09-30 22:04:12.250]	debug.error	service/Favorite.go:59	添加收藏夹失败	{"error": "Error 1364 (HY000): Field 'boos_id' doesn't have a default value"}
+[2025-10-01 16:03:08.655]	debug.info	service/User.go:76	用户信息查询成功	{"user_name": "Bussiness"}
+[2025-10-01 16:03:08.657]	debug.info	service/User.go:84	密码验证成功	{"user_name": "Bussiness"}
+[2025-10-01 16:03:55.400]	debug.info	service/Favorite.go:46	商品已存在于收藏夹	{"userId": 1, "productId": 9}
+[2025-10-01 16:04:00.679]	debug.info	service/Favorite.go:46	商品已存在于收藏夹	{"userId": 1, "productId": 9}
+[2025-10-01 16:04:09.403]	debug.error	service/Favorite.go:35	该商品不存在	{"err": null}
+[2025-10-01 16:04:17.393]	debug.error	service/Favorite.go:35	该商品不存在	{"err": null}
+[2025-10-01 16:04:21.562]	debug.error	service/Favorite.go:35	该商品不存在	{"err": null}
+[2025-10-01 16:13:12.325]	debug.info	service/Favorite.go:94	商品不存在于收藏夹	{"userId": 1, "productId": 9}

@@ -38,7 +38,7 @@ func BuildProduct(product *model.Product) *Product {
 		Title:         product.Title,
 		Info:          product.Info,
 		ImgPath:       global.App.Config.Path.Host + global.App.Config.Path.ProductPath + product.ImgPath,
-		Price:         product.Prince,
+		Price:         product.Price,
 		DiscountPrice: product.DiscountPrice,
 		View:          product.GetView(),
 		CreateAt:      product.CreatedAt.Unix(),

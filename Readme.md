@@ -59,7 +59,8 @@ func Transaction(fn func(tx *gorm.DB) error) error {
 
 ### （四）、完善商品浏览量点击接口
 
-### (五)、完善请求体，响应体的命名（DTO, VO, PO, DO, Entity）
+### （五）、完善请求体，响应体的命名（DTO, VO, PO, DO, Entity）
 
+### （六）、解决图片连接点不开问题
 
 

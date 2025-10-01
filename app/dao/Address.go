@@ -36,5 +36,5 @@ func (addressDao *addressDao) ListAddress(userId uint) (addressList []*model.Add
 
 // UpdateAddress 更新地址
 func (addressDao *addressDao) UpdateAddress(userId uint, addressId uint, address *model.Address) (err error) {
-	return global.App.DB.Where("user_id = ? and id = ?", userId, addressId).Updates(&address).Error
+	return global.App.DB.Select([]string{"name", "phone", "address"}).Where("user_id = ? and id = ?", userId, addressId).Updates(&address).Error
 }

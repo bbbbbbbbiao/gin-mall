@@ -1,6 +1,7 @@
 package service
 
 import (
+	"errors"
 	"gin-mall/app/common/request"
 	"gin-mall/app/dao"
 	"gin-mall/app/model"
@@ -23,15 +24,27 @@ var FavoriteService = new(favoriteService)
 // FavoriteAdd 添加收藏夹
 func (f *favoriteService) FavoriteAdd(id uint, params request.Favorite) (err error) {
 
-	// 检查商品是否存在
-	exist, err := dao.FavoriteDao.ProductIsExist(id, params.ProductId)
+	// 检查商品与商家是否存在
+	isExist, err := dao.ProductDao.ProductIsExist(params.ProductId, params.BossId)
 	if err != nil {
-		global.App.Log.Error("检查商品是否存在失败", zap.Error(err))
+		global.App.Log.Error("检查商品是否存在失败", zap.Any("err", err))
+		return
+	}
+
+	if !isExist {
+		global.App.Log.Error("该商品不存在", zap.Any("err", err))
+		return errors.New("商品不存在")
+	}
+
+	// 检查商品是否存在于收藏夹中
+	exist, err := dao.FavoriteDao.FavoriteIsExist(id, params.ProductId)
+	if err != nil {
+		global.App.Log.Error("检查商品是否存在于收藏夹失败", zap.Any("err", err))
 		return err
 	}
 	if exist {
 		global.App.Log.Info("商品已存在于收藏夹", zap.Uint("userId", id), zap.Uint("productId", params.ProductId))
-		return nil
+		return errors.New("商品已存在于收藏夹")
 	}
 
 	// 添加商品到收藏夹
@@ -71,7 +84,18 @@ func (f *favoriteService) FavoriteList(id uint) (favoriteList []*model.Favorite,
 
 // FavoriteDelete 删除收藏夹
 func (f *favoriteService) FavoriteDelete(id uint, productId uint) error {
-	err := dao.FavoriteDao.FavoriteDelete(id, productId)
+	// 检查商品是否存在收藏夹中
+	exist, err := dao.FavoriteDao.FavoriteIsExist(id, productId)
+	if err != nil {
+		global.App.Log.Error("检查商品是否存在于收藏夹失败", zap.Error(err))
+		return err
+	}
+	if !exist {
+		global.App.Log.Info("商品不存在于收藏夹", zap.Uint("userId", id), zap.Uint("productId", productId))
+		return errors.New("商品不存在于收藏夹")
+	}
+
+	err = dao.FavoriteDao.FavoriteDelete(id, productId)
 	if err != nil {
 		global.App.Log.Error("删除收藏夹失败", zap.Error(err))
 		return err
